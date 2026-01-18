@@ -20,9 +20,14 @@ const images = [
 ]
 const background = document.getElementById('background');
 
+const leftArrow = document.getElementById('leftArrow');
+const rightArrow = document.getElementById('rightArrow');
+
 const imagesContainer = document.querySelector('.thumbnails');
 
 const ariaNotifications = document.getElementById('ariaNotifications');
+
+let currentIndex = 0;
 
 function createThumbnails() {
    images.forEach(function (image) {
@@ -39,14 +44,28 @@ function createThumbnails() {
     })
 
     imagesContainer.append(thumbnailImage);
-   }
-) 
+   })
+   fullBackgroundImage(images[currentIndex]);
+
+   leftArrow.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    fullBackgroundImage(images[currentIndex]);
+})
+    rightArrow.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        fullBackgroundImage(images[currentIndex]);
+    })
 }
 
 createThumbnails()
 
 function fullBackgroundImage(theImage) {
-    background.innerHTML = '';
+    let existingImage = background.querySelector('img');
+
+    if (!existingImage) {
+        existingImage = document.createElement('img');
+        background.appendChild(existingImage);
+    }
 
     const theBackgroundImage = document.createElement('img');
     theBackgroundImage.src = theImage.src;
@@ -56,5 +75,6 @@ function fullBackgroundImage(theImage) {
 
     ariaNotifications.textContent = `Background image changed to ${theImage.alt}`;
 }
+
 
 

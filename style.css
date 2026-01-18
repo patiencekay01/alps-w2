@@ -63,3 +63,21 @@
     position: absolute;
     left: -9999px;
 }
+
+.arrow-button {
+    position: absolute;
+    color: rgb(255, 251, 251);
+    font-size: 35px;
+    z-index:10;
+    top: 50%;
+    background-color: transparent;
+    border: none;
+}
+
+#leftArrow {
+    left: 10px;
+}
+
+#rightArrow {
+    right: 10px;
+}
