@@ -3,25 +3,26 @@ console.log("Hello world!")
 const images = [
 {
     src: "https://images.unsplash.com/photo-1593410012863-e4365ac4ead9?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "View of the snowy mountains" tabindex = "0"
+    alt: "View of the snowy mountains"
 },
 {
     src: "https://plus.unsplash.com/premium_photo-1685133855300-60d42d843c0a?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "An open indoor fire" tabindex="0"
+    alt: "An open indoor fire" 
 },
 {
     src: "https://images.unsplash.com/photo-1691568809118-662c88b63862?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Lake Annecy in France" tabindex="0"
+    alt: "Lake Annecy in France"
 },
 {
     src: "https://images.unsplash.com/photo-1704548908637-b115b9f71ee8?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Chalets in the French Alps" tabindex="0"
+    alt: "Chalets in the French Alps"
 }
 ]
 const background = document.getElementById('background');
 
-
 const imagesContainer = document.querySelector('.thumbnails');
+
+const ariaNotifications = document.getElementById('ariaNotifications');
 
 function createThumbnails() {
    images.forEach(function (image) {
@@ -30,14 +31,14 @@ function createThumbnails() {
     thumbnailImage.src = image.src;
     thumbnailImage.alt = image.alt;
 
-    thumbnailImage.classList.add('thumbnail');
+    thumbnailImage.setAttribute('tabindex', '0');
 
     thumbnailImage.addEventListener('click', function() {
         fullBackgroundImage(image);
         console.log(image)
     })
 
-    imagesContainer.append(thumbnailImage)
+    imagesContainer.append(thumbnailImage);
    }
 ) 
 }
@@ -47,11 +48,13 @@ createThumbnails()
 function fullBackgroundImage(theImage) {
     background.innerHTML = '';
 
-    const theBackgroundImage = document.createElement('img')
-    theBackgroundImage.src = theImage.src
-    theBackgroundImage.alt = theImage.alt
+    const theBackgroundImage = document.createElement('img');
+    theBackgroundImage.src = theImage.src;
+    theBackgroundImage.alt = theImage.alt;
 
     background.append(theBackgroundImage);
+
+    ariaNotifications.textContent = `Background image changed to ${theImage.alt}`;
 }
 
 

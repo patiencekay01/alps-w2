@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    padding: 0%;
+    padding: 0;
 }
 
 #background img {
@@ -57,4 +57,9 @@
     overflow: hidden;
     position: relative;
     background-size: cover;
+}
+
+#ariaNotifications {
+    position: absolute;
+    left: -9999px;
 }
