@@ -6,7 +6,7 @@ const images = [
     alt: "View of the snowy mountains"
 },
 {
-    src: "https://plus.unsplash.com/premium_photo-1736194027876-a658c5a1b5ec?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src: "https://plus.unsplash.com/premium_photo-1685133855300-60d42d843c0a?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "An open fire indoor"
 },
 {
@@ -14,8 +14,8 @@ const images = [
     alt: "Lake Annecy in France"
 },
 {
-    src: "https://images.unsplash.com/photo-1709508496457-e2f9c42493c6?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Chalets in the French Alps with a ski lift in the background"
+    src: "https://images.unsplash.com/photo-1704548908637-b115b9f71ee8?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Chalets in the French Alps"
 }
 ]
 const background = document.getElementById('background');
@@ -29,6 +29,8 @@ function createThumbnails() {
 
     thumbnailImage.src = image.src;
     thumbnailImage.alt = image.alt;
+
+    thumbnailImage.classList.add('thumbnail');
 
     thumbnailImage.addEventListener('click', function() {
         fullBackgroundImage(image);

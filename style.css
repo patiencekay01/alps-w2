@@ -6,12 +6,17 @@
 background img {
     object-fit: cover;
     width: 100%;
-    height: auto;
-    max-height: fit-content;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .thumbnails img{
    height: 15vh; 
+   width: auto;
+   display: block;
 }
 
 .thumbnails {
@@ -21,11 +26,15 @@ background img {
     flex-direction: row;
     justify-content: center;
     gap: 3px;
+    flex-wrap: wrap;
+    width: 100%;
 
     max-width: 100%;
     overflow-x: hidden;
     margin: 0 auto;
     padding: 0 12px;
+    box-sizing: border-box;
+
 }
 
 @media (max-width: 391px) {
@@ -37,4 +46,13 @@ background img {
         height: 45px;
         width: auto;
     }
+}
+
+
+background {
+    width: 100vh;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
 }
