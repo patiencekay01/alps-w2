@@ -3,7 +3,7 @@
     padding: 0%;
 }
 
-background img {
+#background img {
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -20,7 +20,7 @@ background img {
 }
 
 .thumbnails {
-    margin-top: 20px;
+    margin: 5px auto 0 auto;
 
     display: flex;
     flex-direction: row;
@@ -31,7 +31,6 @@ background img {
 
     max-width: 100%;
     overflow-x: hidden;
-    margin: 0 auto;
     padding: 0 12px;
     box-sizing: border-box;
 
@@ -46,11 +45,14 @@ background img {
         height: 45px;
         width: auto;
     }
+    #background {
+        height: 100px;
+    }
 }
 
 
-background {
-    width: 100vh;
+#background {
+    width: 100%;
     height: 100vh;
     overflow: hidden;
     position: relative;

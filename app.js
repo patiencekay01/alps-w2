@@ -3,19 +3,19 @@ console.log("Hello world!")
 const images = [
 {
     src: "https://images.unsplash.com/photo-1593410012863-e4365ac4ead9?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "View of the snowy mountains"
+    alt: "View of the snowy mountains" tabindex = "0"
 },
 {
     src: "https://plus.unsplash.com/premium_photo-1685133855300-60d42d843c0a?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "An open fire indoor"
+    alt: "An open indoor fire" tabindex="0"
 },
 {
     src: "https://images.unsplash.com/photo-1691568809118-662c88b63862?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Lake Annecy in France"
+    alt: "Lake Annecy in France" tabindex="0"
 },
 {
     src: "https://images.unsplash.com/photo-1704548908637-b115b9f71ee8?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Chalets in the French Alps"
+    alt: "Chalets in the French Alps" tabindex="0"
 }
 ]
 const background = document.getElementById('background');
