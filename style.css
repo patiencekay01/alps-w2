@@ -1,11 +1,13 @@
 * {
     box-sizing: border-box;
     padding: 0%;
-    margin: 0%;
 }
 
 background img {
     object-fit: cover;
+    width: 100%;
+    height: auto;
+    max-height: fit-content;
 }
 
 .thumbnails img{
@@ -13,8 +15,26 @@ background img {
 }
 
 .thumbnails {
+    margin-top: 20px;
+
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 6px;
+    gap: 3px;
+
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+@media (max-width: 391px) {
+    .thumbnails {
+        flex-wrap: wrap;
+        gap: 2px;
+    }
+    .thumbnails img {
+        height: 45px;
+        width: auto;
+    }
 }
